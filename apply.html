@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Application</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .form-box {
+            background: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<script>
+const params = new URLSearchParams(window.location.search);
+const job = params.get("job");
+
+if (job) {
+    document.getElementById("jobTitle").innerText = "Applying for: " + job;
+}
+
+function submitForm(e) {
+    e.preventDefault();
+    alert("Application Submitted Successfully!");
+    e.target.reset();
+}
+</script>
+<body>
+
+<div class="form-box">
+    <h2>Apply for Job</h2>
+    <h3 id="jobTitle"></h3>
+    <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="number" placeholder="Experience (years)" required>
+        <input type="file" required>
+        <textarea placeholder="Skills / Details"></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+
+<script>
+function submitForm(e) {
+    e.preventDefault();
+    alert("Application Submitted Successfully!");
+
+    e.target.reset();
+}
+</script>
+
+</body>
+</html>

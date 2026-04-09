@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('images/technopark-trivandrum.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #0fac24;
+}
+
+header {
+    background-color: #46812a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #746f6f;
+    padding: 0.5rem 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+.search {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.search h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #ff3300;
+}
+
+.job-listings {
+    margin: 2rem 0;
+}
+
+.job-listings h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.job-listings ul {
+    list-style: none;
+}
+
+.job-listings li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job-listings h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.job-listings p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.job-listings a {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.job-listings a:hover {
+    background-color: #ff6600;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+/* iii */
+.job-listings ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.job-listings li {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid #ff6600;
+}
+
+.job-listings li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.job-listings h3 {
+    color: #46812a;
+}
+
+.job-listings a {
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .search form {
+        flex-direction: column;
+    }
+
+    .search input {
+        margin-bottom: 10px;
+        width: 80%;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+<style>
+.about-section {
+    background: url('images/237.jpg') no-repeat center/cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-section p {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+</style>
+
+.home-bg {
+    background: url('images/technopark-trivandrum.jpg') no-repeat center/cover;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.overlay input {
+    margin: 10px;
+    padding: 10px;
+}
+
+.overlay button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+#contact {
+    padding: 40px;
+    text-align: center;
+}
+
+#contact iframe {
+    border-radius: 10px;
+}

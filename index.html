@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+    <title>
+        Design a Job Search Portal 
+        using HTML and CSS
+    </title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- iiiii -->
+
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".search form");
+    const jobs = document.querySelectorAll(".job-listings li");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let keyword = form.keywords.value.toLowerCase();
+        let location = form.location.value.toLowerCase();
+        let company = form.company.value.toLowerCase();
+
+        let found = false;
+
+        jobs.forEach(job => {
+            let text = job.innerText.toLowerCase();
+
+            if (
+                text.includes(keyword) &&
+                text.includes(location) &&
+                text.includes(company)
+            ) {
+                job.style.display = "block";
+                found = true;
+            } else {
+                job.style.display = "none";
+            }
+        });
+
+        // ❗ No result case
+        if (!found) {
+            alert("No jobs found!");
+        }
+    });
+
+});
+</script> -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".search form");
+    const jobs = document.querySelectorAll(".job-listings li");
+
+    if (!form) {
+        console.log("Form not found ❌");
+        return;
+    }
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let keyword = document.querySelector('input[name="keywords"]').value.toLowerCase();
+        let location = document.querySelector('input[name="location"]').value.toLowerCase();
+        let company = document.querySelector('input[name="company"]').value.toLowerCase();
+
+        let found = false;
+
+        jobs.forEach(job => {
+            let text = job.innerText.toLowerCase();
+
+            if (
+                (keyword === "" || text.includes(keyword)) &&
+                (location === "" || text.includes(location)) &&
+                (company === "" || text.includes(company))
+            ) {
+                job.style.display = "block";
+                found = true;
+            } else {
+                job.style.display = "none";
+            }
+        });
+
+        if (!found) {
+            alert("No jobs found!");
+        }
+    });
+
+});
+</script>
+<!-- iiii -->
+
+<body>
+    <header>
+        <h1>Job Search Portal</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="job.html">Jobs</a></li>
+            <!-- <li><a href="#">Companies</a></li> -->
+             <!-- <li><a href="#">Contact</a></li> -->
+            
+           <a href="index.html#contact">Contact</a>
+        </ul>
+    </nav>
+   <section class="search">
+    <div class="overlay">
+        <h2>Find Your Dream Job</h2>
+
+        <!-- <form action="#" method="get">
+            <input type="text" name="keywords" placeholder="Keywords">
+            <input type="text" name="location" placeholder="Location">
+            <input type="text" name="company" placeholder="Company">
+            <button type="submit">Search</button>
+             <button type="button" onclick="resetSearch()">Reset</button> -->
+        <!-- </form> --> 
+         <form>
+        <input type="text" name="keywords" placeholder="Job Title ">
+        <input type="text" name="location" placeholder="Location">
+        <input type="text" name="company" placeholder="Company">
+        <button type="submit">Search</button>
+    </form>
+    </div>
+</section>
+
+
+
+    <section class="job-listings">
+        <h2 style="color: rgb(250, 22, 22);"><b>Latest Job Listings</b></h2>
+        <ul>
+            <li>
+    <h3>Software Developer</h3>
+    <p>Company: Infosys</p>
+    <p>Location: Bangalore</p>
+    <p>Description: Develop, test, and maintain software applications using languages like Java, Python, or C++.</p>
+   <a href="apply.html?job=Software Developer">Apply Now</a>
+</li>
+
+<li>
+    <h3>Data Analyst</h3>
+    <p>Company: Tata Consultancy Services</p>
+    <p>Location: Mumbai</p>
+    <p>Description: Analyze datasets, create reports, and provide insights using Excel, SQL, and Power BI.</p>
+    <a href="apply.html?job=Data Analyst">Apply Now</a>
+</li>
+
+<li>
+    <h3>Web Developer</h3>
+    <p>Company: Wipro</p>
+    <p>Location: Hyderabad</p>
+    <p>Description: Design and develop websites using HTML, CSS, JavaScript, and frameworks like React or Angular.</p>
+   <a href="apply.html?job=Web Developer">Apply Now</a>
+</li>
+
+<li>
+    <h3>Cybersecurity Analyst</h3>
+    <p>Company: HCL Technologies</p>
+    <p>Location: Noida</p>
+    <p>Description: Monitor systems for security threats and implement security measures.</p>
+    <a href="apply.html?job=Cybersecurity Analyst">Apply Now</a>
+</li>
+
+<li>
+    <h3>Cloud Engineer</h3>
+    <p>Company: Amazon Web Services</p>
+    <p>Location: Chennai</p>
+    <p>Description: Manage cloud infrastructure and deploy scalable applications using AWS services.</p>
+    <a href="apply.html?job=Cloud Engineer">Apply Now</a>
+</li>
+
+<li>
+    <h3>Machine Learning Engineer</h3>
+    <p>Company: Google</p>
+    <p>Location: Bangalore</p>
+    <p>Description: Build ML models and develop AI-driven solutions using large datasets.</p>
+<a href="apply.html?job=Machine Learning Engineer">Apply Now</a>
+</li>
+
+<li>
+    <h3>DevOps Engineer</h3>
+    <p>Company: Accenture</p>
+    <p>Location: Pune</p>
+    <p>Description: Automate deployment pipelines and manage CI/CD processes.</p>
+    <a href="apply.html?job=DevOps Engineer">Apply Now</a>
+</li>
+
+<li>
+    <h3>Database Administrator</h3>
+    <p>Company: Oracle</p>
+    <p>Location: Gurgaon</p>
+    <p>Description: Maintain databases, ensure data security, and optimize performance.</p>
+   <a href="apply.html?job=Database Administrator">Apply Now</a>
+</li>
+
+<li>
+    <h3>Mobile App Developer</h3>
+    <p>Company: Zoho</p>
+    <p>Location: Chennai</p>
+    <p>Description: Develop Android and iOS apps using Java, Kotlin, or Flutter.</p>
+   <a href="apply.html?job=Mobile App Developer">Apply Now</a>
+</li>
+
+<li>
+    <h3>IT Support Engineer</h3>
+    <p>Company: Tech Mahindra</p>
+    <p>Location: Kochi</p>
+    <p>Description: Provide technical support and troubleshoot IT issues.</p>
+    <a href="apply.html?job=IT Support Engineer">Apply Now</a>
+</li>
+
+<!-- <li><a href="index.html#contact">Contact</a></li> -->
+        </ul>
+    </section>
+    <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: aymer2025@gmail.com</p>
+    <p>Location: Kariavattom Campus, Trivandrum, Kerala, India</p>
+    <p>Phone: 9876543210</p>
+
+    <iframe 
+    src="https://www.google.com/maps?q=Trivandrum&output=embed"
+    width="100%" 
+    height="300" 
+    style="border:0;">
+</iframe>
+</section>
+    <footer>
+        <p>© 2026 Job Search Portal</p>
+    </footer>
+</body>
+
+</html>
